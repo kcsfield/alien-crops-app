@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import HomePage from './components/HomePage';
 import DashboardPage from './components/DashboardPage';
 import AboutPage from './components/AboutPage';
-import SignUpPage from './components/SignUpPage';
 import LoginPage from './components/LoginPage';
+import ChatLinePage from './components/ChatLinePage';
 
 const FOREST_GREEN = '#228B22';
 const DEEP_ORANGE = '#FF8C00';
@@ -17,8 +17,8 @@ function App() {
       case 'home': return <HomePage />;
       case 'dashboard': return <DashboardPage />;
       case 'about': return <AboutPage />;
-      case 'signup': return <SignUpPage />;
       case 'login': return <LoginPage />;
+      case 'chatline': return <ChatLinePage />;
       default: return <HomePage />;
     }
   }
@@ -29,7 +29,7 @@ function App() {
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-white text-2xl font-bold">AlienCrops</h1>
           <div className="space-x-4">
-            {['home', 'dashboard', 'about', 'signup', 'login'].map((page) => (
+            {['home', 'dashboard', 'about', 'login', 'chatline'].map((page) => (
               <button
                 key={page}
                 onClick={() => setCurrentPage(page)}
@@ -38,7 +38,7 @@ function App() {
                 }`}
                 style={currentPage === page ? { backgroundColor: DARK_BLUE } : {}}
               >
-                {page.charAt(0).toUpperCase() + page.slice(1)}
+                {page === 'chatline' ? 'Chat Line' : page.charAt(0).toUpperCase() + page.slice(1)}
               </button>
             ))}
           </div>
