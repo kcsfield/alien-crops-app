@@ -5,7 +5,9 @@ import AboutPage from './components/AboutPage';
 import LoginPage from './components/LoginPage';
 import ChatLinePage from './components/ChatLinePage';
 
+// eslint-disable-next-line no-unused-vars
 const FOREST_GREEN = '#228B22';
+// eslint-disable-next-line no-unused-vars
 const DEEP_ORANGE = '#FF8C00';
 const DARK_BLUE = '#1a202c';
 
