@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/alien-crops-app/static/css/main.0ee09180.css",
+    "main.js": "/alien-crops-app/static/js/main.8d738b78.js",
+    "index.html": "/alien-crops-app/index.html",
+    "main.0ee09180.css.map": "/alien-crops-app/static/css/main.0ee09180.css.map",
+    "main.8d738b78.js.map": "/alien-crops-app/static/js/main.8d738b78.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ee09180.css",
+    "static/js/main.8d738b78.js"
+  ]
+}
