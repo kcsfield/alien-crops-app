@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/alien-crops-app/static/css/main.0ee09180.css",
-    "main.js": "/alien-crops-app/static/js/main.8d738b78.js",
+    "main.css": "/alien-crops-app/static/css/main.a49c5ebe.css",
+    "main.js": "/alien-crops-app/static/js/main.67b38a6e.js",
     "index.html": "/alien-crops-app/index.html",
-    "main.0ee09180.css.map": "/alien-crops-app/static/css/main.0ee09180.css.map",
-    "main.8d738b78.js.map": "/alien-crops-app/static/js/main.8d738b78.js.map"
+    "main.a49c5ebe.css.map": "/alien-crops-app/static/css/main.a49c5ebe.css.map",
+    "main.67b38a6e.js.map": "/alien-crops-app/static/js/main.67b38a6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ee09180.css",
-    "static/js/main.8d738b78.js"
+    "static/css/main.a49c5ebe.css",
+    "static/js/main.67b38a6e.js"
   ]
 }
