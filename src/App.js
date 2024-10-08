@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import HomePage from './components/HomePage';
+import DashboardPage from './components/DashboardPage';
+import AboutPage from './components/AboutPage';
+import SignUpPage from './components/SignUpPage';
+import LoginPage from './components/LoginPage';
+
+const FOREST_GREEN = '#228B22';
+const DEEP_ORANGE = '#FF8C00';
+const DARK_BLUE = '#1a202c';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const renderPage = () => {
+    switch(currentPage) {
+      case 'home': return <HomePage />;
+      case 'dashboard': return <DashboardPage />;
+      case 'about': return <AboutPage />;
+      case 'signup': return <SignUpPage />;
+      case 'login': return <LoginPage />;
+      default: return <HomePage />;
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-100">
+      <nav className="bg-gray-800 p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-white text-2xl font-bold">AlienCrops</h1>
+          <div className="space-x-4">
+            {['home', 'dashboard', 'about', 'signup', 'login'].map((page) => (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                className={`text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium ${
+                  currentPage === page ? `bg-${DARK_BLUE}` : ''
+                }`}
+                style={currentPage === page ? { backgroundColor: DARK_BLUE } : {}}
+              >
+                {page.charAt(0).toUpperCase() + page.slice(1)}
+              </button>
+            ))}
+          </div>
+        </div>
+      </nav>
+      <main className="container mx-auto mt-8 p-4">{renderPage()}</main>
     </div>
   );
 }
