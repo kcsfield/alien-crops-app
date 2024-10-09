@@ -55,6 +55,13 @@
     -->
     <title>React App</title>
     <script>window.PUBLIC_URL = '';</script>
+    <script>
+  window.addEventListener('error', function(e) {
+    if (e.message === "Uncaught SyntaxError: Unexpected token '<'") {
+      window.location.reload(true);
+    }
+  });
+</script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
